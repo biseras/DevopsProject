@@ -19,7 +19,7 @@ jobs:
             
         - name: Build backend image
           run: |
-            docker build -t biseras/backend ./film
+            docker build -t biseras/backend ./backend
         
         - name: Docker push database image
           run: |
