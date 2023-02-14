@@ -4,8 +4,8 @@
 
 replicaCount: 1
 
-biseras/backend:
-  repository: backend
+biseras/backendd:
+  repository: backendd
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
