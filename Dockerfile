@@ -1,8 +1,6 @@
 # Use the official PostgreSQL image as the base image
 FROM postgres:14.1
 
-ENV POSTGRES_USER wp
-
 # Set the environment variable for the password of the "postgres" user
 ENV POSTGRES_PASSWORD wp123
 
