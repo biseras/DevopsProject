@@ -4,8 +4,8 @@
 
 replicaCount: 1
 
-biseras/database:
-  repository: database
+biseras/databasee:
+  repository: databasee
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
@@ -21,7 +21,7 @@ serviceAccount:
   annotations: {}
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name: "databaseservice"
+  name: "service"
 
 podAnnotations: {}
 
