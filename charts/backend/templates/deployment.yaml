@@ -13,10 +13,10 @@ spec:
         app: backend
     spec:
       containers:
-        - name: backend
-          image: biseras/backend
+        - name: backendd
+          image: biseras/backendd
           ports:
             - containerPort: 8080
           env:
             - name: DATABASE_URL
-              value: 127.0.0.1:8080
+              value: 127.0.0.1:5432
