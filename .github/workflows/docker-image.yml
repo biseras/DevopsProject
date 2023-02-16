@@ -15,16 +15,33 @@ jobs:
         
         - name: Build database image
           run: |
-            docker build -t biseras/database ./
+            docker build -t biseras/databasee ./
             
         - name: Build backend image
           run: |
-            docker build -t biseras/backend ./backend
+            docker build -t biseras/backendd ./backend
         
         - name: Docker push database image
           run: |
-            docker push biseras/database
+            docker push biseras/databasee
         
         - name: Docker push backend image
           run: |
-            docker push biseras/backend
+            docker push biseras/backendd
+            
+    deploy:
+        needs: build
+        runs-on: self-hosted
+        steps: 
+        - uses: actions/checkout@v2
+        - name: deploy
+          run: |
+            cd
+            cd DevopsProject
+            git pull
+            cd charts
+            helm upgrade --install database database
+            helm upgrade --install backend backend
+            helm upgrade --install grafana grafana
+            helm upgrade --install prometheus prometheus
+            kubectl rollout restart deployment backend-deployment
