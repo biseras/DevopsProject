@@ -13,8 +13,8 @@ spec:
         app: postgres
     spec:
       containers:
-        - name: database
-          image: biseras/database
+        - name: databasee
+          image: {{ .values.image.repository }}
           ports:
             - containerPort: 5432
           env:
