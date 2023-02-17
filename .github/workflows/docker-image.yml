@@ -1,4 +1,4 @@
-name: Login to Docker, build, tag, push and AWS Deploy
+name: Login to Docker, build, tag, push and Deploy
 on: [push]
 
 jobs:
